@@ -8,6 +8,34 @@ const app = require('express')();
 const superagent = require('superagent');
 const cheerio = require('cheerio');
 
+
+
+
+//app.get('/test', function(req,res,next){
+//    let urlStr = 'http://www.ruanyifeng.com/blog/archives.html';
+//    superagent.get(urlStr).end(function(err,sres){
+//        if(err){
+//            return next(err);
+//        }
+//        let $ = cheerio.load(sres.text); //得到HTML内容源码
+//        let items = [];
+//        $('#alpha-inner .module-list .module-list-item').each(function(idx,element){
+//            let $element = $(element);
+//            items.push({
+//                href:$element.find('a').attr('href'),
+//                hint:$element.find('span').text()
+//            });
+//        });
+//        res.send(items);
+//    });
+//
+//});
+
+
+
+
+
+
 app.get('/', function(req, res, next){
     // 用 superagent 去抓取 https://cnodejs.org/ 的内容
     superagent.get('https://cnodejs.org')
